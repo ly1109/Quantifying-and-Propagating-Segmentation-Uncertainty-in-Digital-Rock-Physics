@@ -79,21 +79,3 @@ for epoch in range(EPOCHS):
         optimizer.lr.assign(optimizer.lr * 0.5)
 np.savetxt(path + 'train_loss.txt', train_loss)
 np.savetxt(path + 'val_loss.txt', val_loss)
-
-
-
-
-
-
-
-
-
-
-
-# if optimizer.lr > 1e-6:  # & (epoch + 1) <= 20& (optimizer.lr > 1e-5)
-#     optimizer.lr.assign(optimizer.lr * 0.95)
-
-# if ((epoch + 1) % 5 == 0) & (optimizer.lr > 1e-6):  # & (epoch + 1) <= 20& (optimizer.lr > 1e-5)
-#     optimizer.lr.assign(optimizer.lr * 0.5)
-#
-# if (epoch + 1) % 10 == 0:
