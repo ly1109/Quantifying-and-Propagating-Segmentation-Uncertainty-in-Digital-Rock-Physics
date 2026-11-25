@@ -47,14 +47,8 @@ os.makedirs(os.path.join(path, "eu"), exist_ok=True)
 num = len(img_files_test)
 T = 20
 start = time.time()
-pd_list = []
-au_list = []
-eu_list = []
 dc_list = []
-rs_list = []
-ps_list = []
 io_list = []
-hd_list = []
 for i in range(num):
     x, y = load_data([img_files_test[i]], [seg_files_test[i]])
     pred, au, eu, scores = predict(model, x, y, time=T)
